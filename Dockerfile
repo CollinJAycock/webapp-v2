@@ -1,9 +1,7 @@
-FROM ubuntu:18.04
+FROM ubuntu:14.04
 MAINTAINER Docker Education Team <education@docker.com>
 RUN apt-get update
-RUN DEBIAN_FRONTEND=noninteractive apt-get install -y -q python3.6 python3.6-venv python3-pip
-RUN python3.6 -m ensurepip --upgrade 
-ADD ./webapp/requirements.txt /tmp/requirements.txt
+RUN DEBIAN_FRONTEND=noninteractive apt-get install -y -q python-all python-pip 
 RUN pip3 install Flask
 RUN pip3 install Jinja2
 RUN pip3 install Werkzeug
