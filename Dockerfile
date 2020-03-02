@@ -7,6 +7,6 @@ RUN pip3 install Flask
 RUN pip3 install Werkzeug
 ADD ./webapp /opt/webapp/
 WORKDIR /opt/webapp
-EXPOSE 5000
+EXPOSE 80
 CMD ["python", "app.py"]
 
