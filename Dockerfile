@@ -2,6 +2,7 @@ FROM ubuntu:18.04
 MAINTAINER Docker Education Team <education@docker.com>
 RUN apt-get update
 RUN DEBIAN_FRONTEND=noninteractive apt-get install -y -q python-all python3-pip 
+RUN python3-pip --version
 RUN pip install Flask
 RUN pip install Jinja2
 RUN pip install Werkzeug
